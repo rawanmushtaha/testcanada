@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Free Topping Pizza</title>
+    <!--
+    <link href="css/bootstrap.css" rel="stylesheet">
+     -->
+    <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+            crossorigin="anonymous">
+
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/jquery-confirm.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+    <link href="css/responsive.css" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link
+            href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css"
+            rel="stylesheet">
+
+</head>
+
+<style>
+    .navbar-default {
+        background-color: #1b2f6d;
+        border-color: #e7e7e7;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        color: #fbf9f9;
+        font-size: 17px;
+
+    }
+    .navbar-default .navbar-nav>li>a:hover {
+        color: #d3efee;
+        background-color: transparent;
+        border-bottom: 4px solid #17d4dc;
+    }
+    .item{
+        padding-left: 4px;
+    }
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: -1px 7px 10px 10px rgba(60, 56, 56, 0.1);
+    }
+
+    .carousel-indicators li.active {
+        background: #fbfbfa;
+    }
+
+/*deal ------------------------------------------------------ */
+    .deal {
+        margin-left: 58px;
+        height: 161px;
+    }
+
+    .pricing {
+        position: absolute;
+        right: 40%;
+        /* top: 52%; */
+        height: 97px;
+        margin-top: -34%;
+    }
+</style>
+
+
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="javascript:display('main');"> <img
+                    class="img-rounded" alt="Brand" src="images/home/logo.png"
+                    style="height: 24px;">
+            </a>
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#topnavbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="topnavbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="javascript:showDeals()"><i
+                        class="fa fa-home"></i> home</a></li>
+                <li><a href="javascript:showDeals()"><i
+                        class="fa fa-bell-o"></i> Specials</a></li>
+                <li><a href="javascript:showMenus()"><i
+                        class="fa fa-crosshairs"></i> Menu</a></li>
+                <!-- -->
+                <li><a href="javascript:showCart()"><i
+                        class="fa fa-shopping-cart"></i> Cart <span class="cartCnt badge badge-success"></span></a></li>
+                <!-- -->
+                <li class="offline"><a href="javascript:login(false)"><i
+                        class="fa fa-lock"></i> Login</a></li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:aboutUs()"><i
+                        class="fa fa-facebook"></i> </a></li>
+                <li><a href="tel:4164999499"><i class="fa fa-twitter"></i> </a></li>
+
+                <li><a href="mailto:info@bsmarter.ca"><i
+                        class="fa fa-envelope"></i> </a></li>
+
+
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<section id="main" style="    background-color: whitesmoke;">
+    <div class="container">
+
+    <!--slider -------------------------------------------------- -->
+        <div class="container" style="    margin-top: 40px;">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 350px;">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img  style="height: 350px;width: 1700px;" src="img/slide5.jpg" alt="Los Angeles" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img  style="height: 350px;width: 1700px;" src="img/slider1.jpg" alt="Chicago" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img  style="height: 350px;width: 1700px;" src="img/slid4.jpg" alt="New york" style="width:100%;">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- end slider ---------------------------------------------------->
+
+        <!-- about ---------------------------------------------------->
+
+        <div class="paraAbout" style="    margin-top: 54px;">
+
+            <h1>Welcome to Our Website Free Topping Pizza</h1>
+            <p class="pargAbout1" style="    margin-top: 30px; font-size: 15px;">
+
+                 started a decade ago with a simple and innovative idea:
+                customers should be able to get exactly the pizza they want without having to worry about additional
+                charges for toppings. At Free Topping Pizza, we let customers be in charge by allowing them to add all
+                the toppings they want for no extra charge. We're a rapidly growing company dedicated to providing customers
+                with the best quality pizza, wings and sides for a great price. We know that satisfied customers are the key to our success.
+                That's why we offer delicious food, fresh ingredients and excellent customer service, all at amazing prices.
+            </p>
+        </div>
+        <!-- end about ---------------------------------------------------->
+
+        <!-- order ------------------------------->
+        <div class="container text-center" style="    background-color: rgba(237, 239, 241, 0.52);      margin-top: 39px; ">
+
+            <br>
+            <div class="row" >
+                <div class="col-sm-3 do1 " style="    background-color: #f7f7f7;margin: 40px;min-height: 400px;min-width: 269px;height: 400px;">
+                    <img src="images/pics/deal_2.png" class="deal img-responsive"
+                         alt="" /> <img src="images/home/19.99.png" class="pricing"
+                                        alt="" />
+
+                    <h2 style="    padding-top: 20px;">Ge a single pizza</h2>
+                    <p>And add as many toppings you want!</p>
+                    <h6>
+                        $10.99 Small<br>$12.99 Medium
+                    </h6>
+                    <button type="button" class="btn btn-default get" style="    margin-top: 28px;">Add
+                        to cart</button>
+
+                </div>
+                <div class="col-sm-3 do1 " style="    background-color: #f7f7f7;margin: 40px;min-height: 400px;min-width: 269px;height: 400px;">
+                    <img src="images/pics/deal_2.png" class="deal img-responsive"
+                         alt="" /> <img src="images/home/19.99.png" class="pricing"
+                                        alt="" />
+
+                    <h2 style="    padding-top: 19px;">
+                        <span>Double</span> Special
+                    </h2>
+                    <h3>Ge two pizzas</h3>
+                    <p>And add as many toppings you want!</p>
+                    <button type="button" class="btn btn-default get">Get
+                        it now</button>
+
+                </div>
+                <div class="col-sm-3 do1 " style="    background-color: #f7f7f7;margin: 40px;min-height: 400px;min-width: 269px;height: 400px;">
+                    <img src="images/pics/deal_3.png" class="deal img-responsive"
+                         alt="" /> <img src="images/home/25.99.png" class="pricing"
+                                        alt="" />
+
+                    <h2 style="    padding-top: 19px;">
+                        <span>Triple</span> Special
+                    </h2>
+                    <h2>Ge three pizzas</h2>
+                    <p>And add as many toppings you want!</p>
+                    <button type="button" class="btn btn-default get">Get
+                        it now</button>
+
+                </div>
+
+
+
+            </div>
+            <hr>
+        </div>
+
+        <!-- end order -------------------------------->
+
+    </div>
+</section>
+
+<!-- footer -------------------------------->
+
+
+<footer id="footer">
+    <!--Footer-->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="companyinfo">
+                        <h2>
+                            <span>Arurra Plazza</span> Free Topping Pizza
+                        </h2>
+                        <p>Why pay for the toppings when you can have them for free?</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a class="youtube"
+                               href="http://www.youtube.com/watch?v=DI8VLrH3ImA">
+                                <div class="iframe-img">
+                                    <img src="images/home/iframe1.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Guide #1</p>
+                            <h2>Navigate the site</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a class="youtube"
+                               href="https://www.youtube.com/watch?v=nBAEJWkiywY">
+                                <div class="iframe-img">
+                                    <img src="images/home/iframe2.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Guide #2</p>
+                            <h2>Add items to card</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a class="youtube"
+                               href="https://www.youtube.com/watch?v=136RVIW5qWk">
+                                <div class="iframe-img">
+                                    <img src="images/home/iframe3.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Guide #3</p>
+                            <h2>Pay and checkout</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="images/home/iframe4.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Guide #4</p>
+                            <h2>Manage your account</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="    margin-top: 54px;">
+                    <ul class="list-group text-left">
+                        <li class="list-group-item" style="    background-color: #f0f0e9;"><a style="color: currentColor;" href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>3883 Don Mills Road, North York, ON, Canada</span>
+                        </a></li>
+                        <li class="list-group-item" style="    background-color: #cecec6;"><a style="color: currentColor;" href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-mobile-phone" aria-hidden="true"></i>
+                            <span> 4164999499</span>
+                        </a> </li>
+                        <li class="list-group-item" style="    background-color: #818181;"><a  style="color: #FFFFFF;" href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <span> info@bsmarter.ca </span>
+                        </a> </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright © 2018 BSmarter.CA All rights
+                    reserved.</p>
+                <p class="pull-right">
+                    Designed by <span><a target="_blank"
+                                         href="http://www.bsmarter.ca">BSmarter.ca</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/ end Footer-------------------------------------->
+<div class="modal fade" id="responseModal" tabindex="-1" role="dialog"
+     aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md">
+        <div
+                class="modal-content text-center border-radius-6 responseContent">
+            <h4 id="responseMessage"></h4>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="pickupOrDelivery" tabindex="-1"
+     role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <div class="modal-dialog modal-md">
+        <div
+                class="modal-content text-center border-radius-6 responseContent">
+            <div class="row">
+                <div class="col-xs-12 text-center" style="margin: 5px;">
+                    <a href="javascript:checkoutPrc('D');"
+                       class="btn btn-block btn-info"><span class="fa fa-car fa-2x"></span>
+                        Delivery</a>
+                </div>
+                <div class="col-xs-12  text-center" style="margin: 5px;">
+                    <a href="javascript:checkoutPrc('P');"
+                       class="btn btn-block btn-danger"><span
+                            class="fa fa-road fa-2x"></span> Pickup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="loginPop" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×</button>
+                <h4 class="modal-title title">
+                    <span id="losu-title" style=" margin-left: 241px;
+      font-size: 26px;
+      color: #337ab7;">Login</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="login-form">
+                            <form class="login-form row" name="login-form" method="post"
+                                  action="javascript:loginPrc('G');">
+                                <div class="login-form-ctrl">
+                                    <div class="input-group" style="margin: 5px;">
+											<span class="input-group-addon"><i
+                                                    class="fa fa-envelope-o fa-fw"></i></span> <input type="text"
+                                                                                                      name="loginEmail" id="loginEmail" class="form-control"
+                                                                                                      required="required" placeholder="email/phone/membership">
+                                    </div>
+                                    <div class="input-group" style="margin: 5px;">
+											<span class="input-group-addon"><i
+                                                    class="fa fa-key fa-fw"></i></span> <input type="password"
+                                                                                               name="loginPassword" id="loginPassword" class="form-control"
+                                                                                               required="required" placeholder="your password">
+                                    </div>
+                                </div>
+                                <div class="login-form-ctrl" style="margin-top: 10px;">
+                                    <div class="form-group col-md-4 text-center">
+                                        <a href="javascript:loginPrc('G');"
+                                           class="btn btn-block btn-success"><span
+                                                class="glyphicon glyphicon-check"></span> Login</a>
+                                    </div>
+                                    <div class="form-group col-md-4 text-center">
+                                        <a href="javascript:loginPrc('R');"
+                                           class="btn btn-block btn-info"><span
+                                                class="glyphicon glyphicon-question-sign"></span> Password</a>
+                                    </div>
+                                    <div class="form-group col-md-4 text-center">
+                                        <a href="javascript:loginPrc('S');"
+                                           class="btn btn-block btn-primary"><span
+                                                class="glyphicon glyphicon-user"></span> Sign Up</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="status message alert-success" ></div>
+                            <div class="status alert alert-danger" style="display: none" ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="loadingData" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Please wait while loading menus and
+                    specials ...</h4>
+            </div>
+            <div class="modal-body">
+                please don't use back and stay on the page.
+                <div class="progress">
+                    <div
+                            class="progress-bar progress-bar-success progress-bar-striped pbar"
+                            role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="modal-footer" id="XXXXXgetOptionsFooter">This may
+                take a few minutes based on your network access.</div>
+        </div>
+    </div>
+</div>
+<div id="getOptions" class="modal fade" data-backdrop="static"
+     data-keyboard="false" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Select an item</h4>
+            </div>
+            <div class="modal-body">
+                <div class="btn-group-vertical btn-block" id="getOptionsText"></div>
+            </div>
+            <div class="modal-footer" id="getOptionsFooter"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="wizardDialog"
+     tabindex="-1" data-backdrop="static" data-keyboard="false"
+     role="dialog" aria-hidden="true">
+    <div class="modal-admin">
+        <input type="hidden" id="wizType" value="" />
+        <div class="modal-content border-radius-6">
+            <div class="modal-header border-radius-top-6">
+                <h4 id="doQuesion" class="text-center">Please select</h4>
+            </div>
+            <div id="wizOptions" class="modal-body overflow-hidden"></div>
+            <div class="modal-footer">
+                <button id="doneBtn" type="button" class="btn btn-info pull-right"
+                        onclick="wizOptionsDone()">
+                    <span class="glyphicon glyphicon-ok"></span> Finish
+                </button>
+                <button id="nextBtn" type="button" class="btn btn-info pull-right"
+                        onclick="wizOptionsNext()" style="margin-right: 10px;">
+                    <span class="glyphicon glyphicon-arrow-right"></span> Next
+                </button>
+                <button id="backBtn" type="button"
+                        class="btn btn-warning pull-left" onclick="wizOptionsBack()">
+                    <span class="glyphicon glyphicon-arrow-left"></span> Back
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="confirmDialog"
+     tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content border-radius-6">
+            <div class="modal-header border-radius-top-6">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×</button>
+                <h4 class="modal-title text-center text-capitalize">Confirm
+                    Delete Cart Item</h4>
+            </div>
+            <div class="modal-body overflow-hidden">
+                <div class="col-xs-12 mar-bot-15">
+                    <h4 class="text-center ">Are you sure you want to delete the
+                        cart item?</h4>
+                </div>
+                <div class="text-right hidden-xs">
+                    <button type="reset"
+                            class="btn btn-danger border-radius-4 width-100px"
+                            data-dismiss="modal">No</button>
+                    <button type="submit" onclick="removeCartItem()"
+                            class="btn btn-primary border-radius-4 width-100px">Yes</button>
+                </div>
+                <div class="hidden-sm hidden-md hidden-lg mar-top-15">
+                    <div class="col-xs-12 mar-bot-15 mnopadding">
+                        <button type="submit" onclick="removeCartItem()"
+                                class="btn btn-primary btn-block border-radius-4">Yes</button>
+                    </div>
+                    <div class="col-xs-12 mar-bot-15 mnopadding mobile-mar-top-10">
+                        <button type="reset"
+                                class="btn btn-danger btn-block border-radius-4"
+                                data-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mobDevice" class="hidden-xs hidden-sm"></div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+        integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+        crossorigin="anonymous"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/validate.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jsaes.js"></script>
+<script src="js/bootstrap-switch.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script type="text/javascript" src="js/bootstrap.youtubepopup.min.js"></script>
+<script src="js/jquery-confirm.js"></script>
+<script src="js/script.js"></script>
+<script src="js/account.js"></script>
+<script src="js/tools.js"></script>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBbJnm0wQIfHLbivH0ew9rd3XgikpCQo0&libraries=places,geometry"></script>
+<script>
+    $(document).ready(function() {
+        initApp();
+        setupUI();
+        getInitialData(function() {
+            renderIndexDeals(null);
+        }, true);
+    });
+</script>
+</body>
